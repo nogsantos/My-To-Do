@@ -1,0 +1,12 @@
+@import '@/assets/scss/helpers/_inherits.scss';
+
+.app {
+  &-layout {
+    &-list {
+      margin: 0;
+      &--center {
+        @extend %center;
+      }
+    }
+  }
+}

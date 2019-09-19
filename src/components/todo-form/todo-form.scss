@@ -1,0 +1,9 @@
+@import '@/assets/scss/helpers/_inherits.scss';
+
+.app {
+  &-layout {
+    &-form {
+      @extend %centered-element-position;
+    }
+  }
+}

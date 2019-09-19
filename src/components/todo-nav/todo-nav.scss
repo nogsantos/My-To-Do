@@ -1,0 +1,44 @@
+@import '@/assets/scss/abstract/_variables.scss';
+
+.app {
+  &-layout {
+    &-nav {
+      position: fixed;
+      z-index: 1;
+      width: 100%;
+
+      @extend %default-background;
+
+      &-logo {
+        width: 120px;
+        height: 31px;
+        background: rgba(255, 255, 255, 0.2);
+        margin: 0 24px 16px 0;
+        float: left;
+      }
+
+      &-menu {
+        line-height: 64px;
+      }
+    }
+  }
+}
+
+.ant {
+  &-menu {
+    &-dark {
+      @extend %default-background;
+    }
+  }
+  &-layout {
+    &-nav {
+      &-menu {
+        @extend %default-background;
+      }
+    }
+  }
+}
+
+%default-background {
+  background-color: $green !important;
+}
