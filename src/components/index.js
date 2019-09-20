@@ -1,4 +1,6 @@
-export { default as TodoNav } from './todo-nav/';
-export { default as TodoFooter } from './todo-footer/';
+export { default as AppNav } from './app-nav/';
+export { default as AppFooter } from './app-footer/';
+export { default as AppEmoji } from './app-emoji/';
 export { default as TodoForm } from './todo-form/';
 export { default as TodoList } from './todo-list/';
+export { default as DoneList } from './done-list/';

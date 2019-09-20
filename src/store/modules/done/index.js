@@ -7,11 +7,12 @@ const namespaced = true;
 export default {
   namespaced,
   state: () => ({
-    todo: {
+    done: {
       id: Number,
       title: String,
       observation: String,
       created_at: Date,
+      finished_at: Date,
     },
     list: [],
   }),

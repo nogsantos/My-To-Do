@@ -1,7 +1,7 @@
 import store from '@/store/';
 
-const todo = (state = store.state) => {
-  return state.todo;
+const done = (state = store.state) => {
+  return state.done;
 };
 
 const list = (state = store.activation) => {
@@ -9,6 +9,6 @@ const list = (state = store.activation) => {
 };
 
 export default {
-  todo,
+  done,
   list,
 };

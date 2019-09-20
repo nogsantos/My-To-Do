@@ -8,6 +8,7 @@ module.exports = {
     'no-console': process.env.NODE_ENV === 'production' ? 'error' : 'off',
     'no-debugger': process.env.NODE_ENV === 'production' ? 'error' : 'off',
     singleQuote: 'off',
+    'vue/html': 'off',
   },
   parserOptions: {
     parser: 'babel-eslint',

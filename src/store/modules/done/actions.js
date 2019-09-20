@@ -12,13 +12,8 @@ const exclude = ({ commit }, payload) => {
   commit(types.EXCLUDE, payload);
 };
 
-const update = ({ commit }, payload) => {
-  commit(types.UPDATE, payload);
-};
-
 export default {
   add,
   list,
   exclude,
-  update,
 };

@@ -2,24 +2,18 @@ import db from '@/config/db';
 import types from './types';
 
 const add = (state, payload) => {
-  const todo = { ...payload };
-  db.todo.add(todo).then(id => {
-    Object.assign(todo, { id: id });
-    state.todo = todo;
-    state.list.push(todo);
+  const done = { ...payload };
+  db.done.add(done).then(id => {
+    Object.assign(done, { id: id });
+    state.done = done;
+    state.list.unshift(done);
   });
 };
 
 const list = async state => {
-  await db.todo.each(todo => {
+  await db.done.reverse().each(todo => {
     state.list.push(todo);
   });
-};
-
-const update = (state, payload) => {
-  const todo = { ...payload };
-  db.todo.update(todo.id, todo);
-  state.todo = todo;
 };
 
 const exclude = (state, payload) => {
@@ -44,7 +38,7 @@ class Exclude {
   }
 
   fromIndexedDB() {
-    return db.todo
+    return db.done
       .where('id')
       .equals(this.__payload.id)
       .delete();
@@ -58,6 +52,5 @@ class Exclude {
 export default {
   [types.ADD]: add,
   [types.LIST]: list,
-  [types.UPDATE]: update,
   [types.EXCLUDE]: exclude,
 };

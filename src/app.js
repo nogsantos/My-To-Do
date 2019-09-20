@@ -1,14 +1,17 @@
 import Module from '@/config/module';
-import userStore from '@/store/modules/todo/';
-import { TodoNav, TodoFooter, TodoForm, TodoList } from '@/components/';
+import TodoStore from '@/store/modules/todo/';
+import DoneStore from '@/store/modules/done/';
+
+import { AppNav, AppFooter, TodoForm, TodoList, DoneList } from '@/components/';
 
 export default {
   name: 'app',
-  extends: Module('todo', userStore),
+  mixins: [Module('todo', TodoStore), Module('done', DoneStore)],
   components: {
     TodoList,
-    TodoNav,
+    DoneList,
+    AppNav,
     TodoForm,
-    TodoFooter,
+    AppFooter,
   },
 };
