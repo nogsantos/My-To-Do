@@ -1,3 +1,16 @@
+import { mapGetters } from 'vuex';
+
 export default {
-  name: 'nav',
+  name: 'todo-nav',
+  ...mapGetters(['doneCount']),
+  data() {
+    return {
+      done: null,
+    };
+  },
+  computed: {
+    doneCount() {
+      this.doneCount().then(value => (this.done = value));
+    },
+  },
 };

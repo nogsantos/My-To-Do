@@ -1,0 +1,8 @@
+export default {
+  ADD: 'ADD',
+  UPDATE: 'UPDATE',
+  DONE: 'DONE',
+  DELETE: 'DELETE',
+  TODOS_COUNT: 'TODOS_COUNT',
+  DONE_COUNT: 'DONE_COUNT',
+};

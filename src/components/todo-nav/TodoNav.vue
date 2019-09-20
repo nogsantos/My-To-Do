@@ -2,7 +2,8 @@
   <a-layout>
     <a-layout-header class="app-layout-nav">
       <div class="app-layout-nav-logo">Fabricio Nogueira</div>
-      <a-menu theme="dark" mode="horizontal" class="app-layout-nav-menu"></a-menu>
+      * {{ done }}
+      <!-- <a-menu theme="dark" mode="horizontal" class="app-layout-nav-menu"></a-menu> -->
     </a-layout-header>
   </a-layout>
 </template>

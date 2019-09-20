@@ -1,7 +1,7 @@
 <template>
   <a-layout class="app-layout-form">
     <a-form>
-      <a-input placeholder="Basic usage" />
+      <a-input size="large" placeholder="Basic usage" @keyup.enter="add" />
     </a-form>
   </a-layout>
 </template>

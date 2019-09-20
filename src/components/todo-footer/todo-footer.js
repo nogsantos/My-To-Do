@@ -1,5 +1,5 @@
 export default {
-  name: 'footer',
+  name: 'todo-footer',
   data() {
     return {
       year: new Date().getFullYear(),
