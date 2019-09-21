@@ -1,3 +1,5 @@
+import { notification } from 'ant-design-vue';
+
 import db from '@/config/db';
 import types from './types';
 
@@ -7,6 +9,10 @@ const add = (state, payload) => {
     Object.assign(todo, { id: id });
     state.todo = todo;
     state.list.push(todo);
+    notification.success({
+      message: 'Success',
+      description: `To Do '${todo.title}' successfully created!`,
+    });
   });
 };
 
@@ -18,8 +24,20 @@ const list = async state => {
 
 const update = (state, payload) => {
   const todo = { ...payload };
-  db.todo.update(todo.id, todo);
-  state.todo = todo;
+  db.todo.update(todo.id, todo).then(updated => {
+    if (updated) {
+      notification.success({
+        message: 'Success',
+        description: `To Do '${todo.title}' Updated!`,
+      });
+      state.todo = todo;
+    } else {
+      notification.error({
+        message: 'Error',
+        description: 'Sorry, something is wrong...',
+      });
+    }
+  });
 };
 
 const exclude = (state, payload) => {
@@ -27,6 +45,10 @@ const exclude = (state, payload) => {
   exclude.fromStore();
   exclude.fromIndexedDB();
   state.list = exclude.list;
+  notification.success({
+    message: 'Success',
+    description: `'${payload.title}' excluded.`,
+  });
 };
 
 class Exclude {

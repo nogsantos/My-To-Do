@@ -1,11 +1,9 @@
 .app {
   &-layout {
     &-content {
-      background: '#fff';
+      flex: 1 0 auto;
       padding: 24px;
-      min-height: 380px;
-      padding: 0 50px;
-      margin-top: 64px;
+      padding: 70px 50px;
     }
   }
 }

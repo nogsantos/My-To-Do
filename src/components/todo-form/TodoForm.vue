@@ -4,7 +4,7 @@
       <a-form-item>
         <a-input
           size="large"
-          placeholder="Basic usage"
+          placeholder="To Do Title"
           v-decorator="['title',{
             rules: [
               { min: 3, message: 'Ensure this field has min 3 character.' },
@@ -14,14 +14,12 @@
         />
       </a-form-item>
       <a-form-item>
-        <a-textarea :rows="4" v-decorator="['observation']" />
+        <a-textarea :rows="4" placeholder="To Do observation" v-decorator="['observation']" />
       </a-form-item>
     </a-form>
-    <a-row>
-      <a-col :span="12">
-        <a-button size="large" @click="add" type="primary">Add</a-button>
-      </a-col>
-    </a-row>
+    <a-col :span="24">
+      <a-button size="large" @click="add" block type="primary">Add</a-button>
+    </a-col>
     <a-row v-if="typeof todo.id !== 'function'">
       <h2>Last interacted To Do</h2>
       <ul>

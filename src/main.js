@@ -5,6 +5,7 @@ import store from '@/store';
 import '@/registerServiceWorker';
 
 import 'ant-design-vue/dist/antd.css';
+import '@/assets/scss/base/_base.scss';
 
 /**
  * Configs

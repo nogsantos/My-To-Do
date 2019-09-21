@@ -1,3 +1,5 @@
+import { notification } from 'ant-design-vue';
+
 import db from '@/config/db';
 import types from './types';
 
@@ -7,6 +9,10 @@ const add = (state, payload) => {
     Object.assign(done, { id: id });
     state.done = done;
     state.list.unshift(done);
+    notification.success({
+      message: 'Success',
+      description: `Great Job! To Do '${done.title}' marked as done.`,
+    });
   });
 };
 
@@ -21,6 +27,10 @@ const exclude = (state, payload) => {
   exclude.fromStore();
   exclude.fromIndexedDB();
   state.list = exclude.list;
+  notification.success({
+    message: 'Success',
+    description: `'${payload.title}' excluded.`,
+  });
 };
 
 class Exclude {

@@ -24,14 +24,9 @@ export default {
           this.add_todo({
             title: values.title,
             observation: values.observation,
-            done: 'false',
             created_at: new Date(),
           });
-          this.form.setFieldsValue({ title: undefined, observation: undefined });
-          this.$notification.success({
-            message: 'Success',
-            description: 'ToDo successfull created',
-          });
+          this.form.resetFields();
         }
       });
     },
