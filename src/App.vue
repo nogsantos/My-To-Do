@@ -15,6 +15,7 @@
       </a-row>
     </a-layout-content>
     <AppFooter></AppFooter>
+    <a-back-top />
   </a-layout>
 </template>
 
