@@ -16,10 +16,8 @@
         width: 120px;
         height: 65px;
         text-align: center;
-        background: rgba(255, 255, 255, 0.2);
-        margin: 0 24px 16px 0;
-        float: left;
         font-size: 1.3rem;
+        letter-spacing: 4px;
       }
 
       &-counters {
@@ -34,6 +32,12 @@
         &--destaq {
           font-size: 1.8rem;
           font-weight: bold;
+          width: 64px;
+          height: 64px;
+          border-radius: 4px;
+          background: rgba(255, 255, 255, 0.2);
+          display: inline-block;
+          vertical-align: top;
         }
       }
     }
