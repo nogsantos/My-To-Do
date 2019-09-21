@@ -1,5 +1,20 @@
 import Vue from 'vue';
-import Antd from 'ant-design-vue/es';
+import {
+  Button,
+  Card,
+  Layout,
+  Skeleton,
+  Row,
+  Col,
+  Form,
+  Input,
+  Divider,
+  Icon,
+  Popconfirm,
+  Affix,
+  BackTop,
+  message,
+} from 'ant-design-vue';
 import App from '@/App.vue';
 import store from '@/store';
 import '@/registerServiceWorker';
@@ -15,7 +30,21 @@ const isDevelopmentEvironment = process.env.NODE_ENV && process.env.NODE_ENV !==
 Vue.config.productionTip = isDevelopmentEvironment;
 Vue.config.devtools = isDevelopmentEvironment;
 
-Vue.use(Antd);
+Vue.use(Button);
+Vue.use(Card);
+Vue.use(Layout);
+Vue.use(Skeleton);
+Vue.use(Row);
+Vue.use(Col);
+Vue.use(Form);
+Vue.use(Input);
+Vue.use(Divider);
+Vue.use(Icon);
+Vue.use(Popconfirm);
+Vue.use(Affix);
+Vue.use(BackTop);
+
+Vue.prototype.$message = message;
 
 new Vue({
   store,
