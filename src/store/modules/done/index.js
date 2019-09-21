@@ -11,6 +11,7 @@ export default {
       id: Number,
       title: String,
       observation: String,
+      tags: [],
       created_at: Date,
       finished_at: Date,
     },
