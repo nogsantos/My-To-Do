@@ -1,4 +1,5 @@
 import { mapActions, mapGetters } from 'vuex';
+import { DateHelper } from '@/mixins';
 
 const store = {
   module: {
@@ -8,6 +9,7 @@ const store = {
 
 export default {
   name: 'todo-form',
+  mixins: [DateHelper],
   beforeCreate() {
     this.form = this.$form.createForm(this);
   },
@@ -30,6 +32,5 @@ export default {
         }
       });
     },
-    instance() {},
   },
 };
