@@ -6,3 +6,9 @@ body {
   display: flex;
   flex-direction: column;
 }
+
+.ant {
+  &-layout {
+    background: unset !important;
+  }
+}

@@ -9,8 +9,9 @@
         >
           <a-card-meta>
             <div slot="title">
-              <span class="app-layout-list-title">{{ done.title }}</span>
-              <span class="app-layout-list-subtitle">{{ done.timestamp }}</span>
+              <div class="app-layout-list-title">{{ done.title }}</div>
+              <div class="app-layout-list-subtitle">{{ done.created_at }}</div>
+              <div class="app-layout-list-subtitle">{{ done.finished_at }}</div>
             </div>
             <div slot="description">{{ done.observation }}</div>
           </a-card-meta>

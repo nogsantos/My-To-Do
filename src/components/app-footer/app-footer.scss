@@ -4,9 +4,6 @@
   &-layout {
     &-footer {
       text-align: center;
-      //   position: fixed;
-      //   bottom: 0;
-      //   width: 100vw;
       flex-shrink: 0;
 
       @extend %def-box-shadow;

@@ -7,6 +7,20 @@
       &--center {
         @extend %center;
       }
+      &-card {
+        padding: unset !important;
+        &-grid {
+          width: 100% !important;
+          text-align: center;
+        }
+      }
+    }
+  }
+}
+.ant {
+  &-card {
+    &-body {
+      padding: unset !important;
     }
   }
 }
