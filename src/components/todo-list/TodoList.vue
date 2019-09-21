@@ -17,7 +17,7 @@
               <div slot="title">
                 <span class="app-layout-list-title">
                   <a-input v-model="todo.title"></a-input>
-                  <div class="app-layout-list-subtitle">{{todo.created_at}}</div>
+                  <div class="app-layout-list-subtitle">{{ todo.created_at }}</div>
                 </span>
               </div>
               <div slot="description">
@@ -30,7 +30,10 @@
                   type="primary"
                   shape="circle"
                   icon="check"
-                  @click="exclude(todo);createDone(todo)"
+                  @click="
+                    exclude(todo);
+                    createDone(todo);
+                  "
                 ></a-button>
               </a-col>
               <a-col :span="8">
@@ -39,7 +42,7 @@
               <a-col :span="8">
                 <a-popconfirm okText="Yes" cancelText="No" @confirm="exclude(todo)">
                   <template slot="title">
-                    <p>Are you sure, do you want to delete {{todo.title}}?</p>
+                    <p>Are you sure, do you want to delete {{ todo.title }}?</p>
                   </template>
                   <a-icon slot="icon" type="question-circle-o" style="color: red" />
                   <a-button type="danger" shape="circle" icon="delete"></a-button>

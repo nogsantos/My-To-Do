@@ -7,12 +7,15 @@
           <a-input
             size="large"
             placeholder="To Do Title"
-            v-decorator="['title',{
+            v-decorator="[
+              'title',
+              {
                 rules: [
-                { min: 3, message: 'Ensure this field has min 3 character.' },
-                { required: true, message: 'Informe a Title' }
-                ]
-            }]"
+                  { min: 3, message: 'Ensure this field has min 3 character.' },
+                  { required: true, message: 'Informe a Title' },
+                ],
+              },
+            ]"
           />
         </a-form-item>
         <a-form-item>

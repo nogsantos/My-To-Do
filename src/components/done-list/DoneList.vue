@@ -2,11 +2,7 @@
   <a-layout class="app-layout-list">
     <a-skeleton :loading="loading" active>
       <a-card title="Done" v-if="list_of_done.length > 0">
-        <a-card-grid
-          style="width:25%;textAlign:'center'"
-          v-for="done in list_of_done"
-          :key="done.id"
-        >
+        <a-card-grid style="width:25%;textAlign:'center'" v-for="done in list_of_done" :key="done.id">
           <a-card-meta>
             <div slot="title">
               <div class="app-layout-list-title">{{ done.title }}</div>

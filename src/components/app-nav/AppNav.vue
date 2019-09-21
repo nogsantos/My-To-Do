@@ -15,9 +15,7 @@
         </a-col>
         <a-col :span="8">
           <span class="app-layout-nav-counters--title">Total:</span>
-          <span
-            class="app-layout-nav-counters--destaq"
-          >{{ (total_of_done.length + total_of_todo.length) || 0 }}</span>
+          <span class="app-layout-nav-counters--destaq">{{ total_of_done.length + total_of_todo.length || 0 }}</span>
         </a-col>
       </div>
     </a-col>
