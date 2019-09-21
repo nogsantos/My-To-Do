@@ -1,11 +1,17 @@
-@import '@/assets/scss/helpers/_inherits.scss';
-
 .app {
   &-layout {
     &-list {
-      margin: 0;
-      &--center {
-        @extend %center;
+      &-card {
+        &-title {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+        }
+        padding: unset !important;
+        &-grid {
+          width: 100% !important;
+          text-align: center;
+        }
       }
     }
   }

@@ -1,6 +1,7 @@
 import { mapGetters, mapActions } from 'vuex';
 
-import { AppEmoji } from '@/components/';
+import { AppEmoji, AppExport } from '@/components/';
+import { DateHelper } from '@/mixins/';
 
 const store = {
   module: {
@@ -12,8 +13,10 @@ const store = {
 export default {
   name: 'todo-list',
   components: {
-    AppEmoji,
+    'app-emoji': AppEmoji,
+    'app-export': AppExport,
   },
+  mixins: [DateHelper],
   computed: {
     ...mapGetters(store.module.todo, {
       list_of_todo: 'list',
@@ -35,6 +38,9 @@ export default {
     },
     updateToDo(todo) {
       this.update(todo);
+    },
+    excludeTodo(todo) {
+      this.exclude(Object.assign(todo, { silent: true }));
     },
   },
   created() {

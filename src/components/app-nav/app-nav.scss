@@ -25,7 +25,7 @@
         text-align: center;
         &--title {
           &::after {
-            content: '...';
+            content: ' » ';
             padding: 5px;
           }
         }

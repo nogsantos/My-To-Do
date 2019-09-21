@@ -5,7 +5,7 @@ export default {
       const day = formated_date.getDate();
       const month = formated_date.getMonth() + 1;
       const year = formated_date.getFullYear();
-      const timer = `${formated_date.getHours()}:${formated_date.getSeconds()}`;
+      const timer = `${('0' + formated_date.getHours()).slice(-2)}:${('0' + formated_date.getSeconds()).slice(-2)}`;
       return `${('0' + day).slice(-2)}/${('0' + month).slice(-2)}/${year} ${timer}`;
     },
   },

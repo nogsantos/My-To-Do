@@ -1,3 +1,5 @@
+@import '../abstract/variables';
+
 html,
 body {
   height: 100vh;
@@ -10,5 +12,32 @@ body {
 .ant {
   &-layout {
     background: unset !important;
+  }
+  &-card {
+    &-grid {
+      padding: 10px;
+    }
+    &-body {
+      padding: unset !important;
+    }
+  }
+  &-btn {
+    &-primary {
+      background-color: $green;
+      border-color: $green;
+      &:hover,
+      &:focus {
+        background-color: $green;
+        border-color: $green;
+      }
+    }
+    &-background {
+      &-ghost {
+        &.ant-btn-primary {
+          color: $green;
+          border-color: $green;
+        }
+      }
+    }
   }
 }

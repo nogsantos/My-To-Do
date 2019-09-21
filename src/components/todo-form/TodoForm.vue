@@ -30,7 +30,7 @@
         <ul>
           <li>Title: {{ todo.title || '' }}</li>
           <li>Observation: {{ todo.observation || '' }}</li>
-          <li>Created at: {{ format(todo.created_at) || '' }}</li>
+          <li>Created at: {{ format(todo.created_at || '') }}</li>
         </ul>
       </a-row>
     </a-layout>

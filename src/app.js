@@ -8,10 +8,10 @@ export default {
   name: 'app',
   mixins: [Module('todo', TodoStore), Module('done', DoneStore)],
   components: {
-    TodoList,
-    DoneList,
-    AppNav,
-    TodoForm,
-    AppFooter,
+    'todo-list': TodoList,
+    'done-list': DoneList,
+    'app-nav': AppNav,
+    'todo-form': TodoForm,
+    'app-footer': AppFooter,
   },
 };

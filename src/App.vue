@@ -1,20 +1,20 @@
 <template>
   <a-layout class="app-layout">
-    <AppNav></AppNav>
+    <app-nav></app-nav>
     <a-layout-content class="app-layout-content">
       <a-row :gutter="8">
-        <a-col :xs="24" :sm="24" :md="6" :lg="6" :xl="6">
-          <TodoForm />
+        <a-col :xs="24" :sm="24" :md="4" :lg="4" :xl="4">
+          <todo-form></todo-form>
         </a-col>
-        <a-col :xs="24" :sm="24" :md="9" :lg="9" :xl="9">
-          <TodoList></TodoList>
+        <a-col :xs="24" :sm="24" :md="10" :lg="10" :xl="10">
+          <todo-list></todo-list>
         </a-col>
-        <a-col :xs="24" :sm="24" :md="9" :lg="9" :xl="9">
-          <DoneList></DoneList>
+        <a-col :xs="24" :sm="24" :md="10" :lg="10" :xl="10">
+          <done-list></done-list>
         </a-col>
       </a-row>
     </a-layout-content>
-    <AppFooter></AppFooter>
+    <app-footer></app-footer>
     <a-back-top />
   </a-layout>
 </template>

@@ -45,10 +45,12 @@ const exclude = (state, payload) => {
   exclude.fromStore();
   exclude.fromIndexedDB();
   state.list = exclude.list;
-  notification.success({
-    message: 'Success',
-    description: `'${payload.title}' excluded.`,
-  });
+  if (!payload.silent) {
+    notification.success({
+      message: 'Success',
+      description: `'${payload.title}' excluded.`,
+    });
+  }
 };
 
 class Exclude {

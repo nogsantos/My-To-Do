@@ -1,5 +1,7 @@
 import { mapGetters, mapActions } from 'vuex';
 
+import { AppExport } from '@/components/';
+
 const store = {
   module: {
     done: 'done',
@@ -8,6 +10,9 @@ const store = {
 
 export default {
   name: 'done-list',
+  components: {
+    'app-export': AppExport,
+  },
   computed: {
     ...mapGetters(store.module.done, {
       list_of_done: 'list',

@@ -14,6 +14,7 @@ import {
   Affix,
   BackTop,
   message,
+  Tooltip,
 } from 'ant-design-vue';
 import App from '@/App.vue';
 import store from '@/store';
@@ -43,6 +44,7 @@ Vue.use(Icon);
 Vue.use(Popconfirm);
 Vue.use(Affix);
 Vue.use(BackTop);
+Vue.use(Tooltip);
 
 Vue.prototype.$message = message;
 

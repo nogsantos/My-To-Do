@@ -1,7 +1,13 @@
 <template>
   <a-layout class="app-layout-list">
     <a-skeleton :loading="loading" active>
-      <a-card title="Done" v-if="list_of_done.length > 0">
+      <a-card v-if="list_of_done.length > 0">
+        <span slot="title" class="app-layout-list-card-title">
+          <span class="app-layout-list-card-title--text">Done</span>
+          <span class="app-layout-list-card-title--action">
+            <app-export :resource="list_of_done" source="done"></app-export>
+          </span>
+        </span>
         <a-card-grid style="width:25%;textAlign:'center'" v-for="done in list_of_done" :key="done.id">
           <a-card-meta>
             <div slot="title">

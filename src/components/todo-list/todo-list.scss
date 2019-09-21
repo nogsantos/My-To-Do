@@ -1,26 +1,48 @@
-@import '@/assets/scss/helpers/_inherits.scss';
+@import '@/assets/scss/abstract/_variables.scss';
 
 .app {
   &-layout {
     &-list {
-      margin: 0;
-      &--center {
-        @extend %center;
-      }
       &-card {
         padding: unset !important;
+        &-title {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+        }
+
         &-grid {
+          height: 240px;
+          overflow: hidden;
           width: 100% !important;
           text-align: center;
+
+          input,
+          textarea {
+            border: 1px dotted transparent;
+            &:focus,
+            &:hover {
+              border: 1px dotted $green;
+              background-color: rgba($color: $yellow, $alpha: 0.1);
+              box-shadow: unset;
+            }
+          }
+
+          &-actions {
+            position: relative;
+            width: 100%;
+            bottom: 10px;
+          }
         }
       }
     }
-  }
-}
-.ant {
-  &-card {
-    &-body {
-      padding: unset !important;
+    &-no_todo {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      & > * {
+        margin: 2rem 0;
+      }
     }
   }
 }
