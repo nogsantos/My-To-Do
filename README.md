@@ -1,4 +1,4 @@
-# my-todolist
+# My To Do
 
 ## Project setup
 
