@@ -5,6 +5,8 @@
     &-list {
       &-card {
         padding: unset !important;
+        background-color: rgba($color: $green, $alpha: 0.03);
+
         &-title {
           display: flex;
           align-items: center;
@@ -19,19 +21,25 @@
 
           input,
           textarea {
-            border: 1px dotted transparent;
+            border: 2px dotted transparent;
+            background-color: rgba($color: $green, $alpha: 0);
+
             &:focus,
             &:hover {
-              border: 1px dotted $green;
-              background-color: rgba($color: $yellow, $alpha: 0.1);
+              border: 2px dotted $yellow;
+              color: #fff;
+              background-color: $green;
               box-shadow: unset;
             }
           }
 
-          &-actions {
-            position: relative;
-            width: 100%;
-            bottom: 10px;
+          &-info {
+            font-style: italic;
+            margin: 5px 0 0 0;
+          }
+
+          &-divider {
+            margin-bottom: 10px;
           }
         }
       }

@@ -27,13 +27,13 @@
               </div>
               <div slot="description">
                 <a-textarea v-model="todo.observation" :rows="4"></a-textarea>
-                <div class="app-layout-list-card-grid-subtitle">Create at {{ format(todo.created_at) }}</div>
+                <div class="app-layout-list-card-grid-info">Create at {{ format(todo.created_at) }}</div>
               </div>
             </a-card-meta>
-            <a-divider></a-divider>
+            <a-divider class="app-layout-list-card-grid-divider"></a-divider>
             <a-row class="app-layout-list-card-grid-actions" :gutter="8">
-              <a-tooltip title="Make as done" placement="top">
-                <a-col :span="8">
+              <a-col :span="8">
+                <a-tooltip title="Make as done" placement="top">
                   <a-button
                     type="primary"
                     shape="circle"
@@ -43,8 +43,8 @@
                       createDone(todo);
                     "
                   ></a-button>
-                </a-col>
-              </a-tooltip>
+                </a-tooltip>
+              </a-col>
               <a-col :span="8">
                 <a-tooltip title="Edit save" placement="top">
                   <a-button type="default" shape="circle" @click="updateToDo(todo)" icon="edit"></a-button>

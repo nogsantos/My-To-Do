@@ -1,6 +1,7 @@
 import { mapGetters, mapActions } from 'vuex';
 
 import { AppExport } from '@/components/';
+import { DateHelper } from '@/mixins/';
 
 const store = {
   module: {
@@ -13,6 +14,7 @@ export default {
   components: {
     'app-export': AppExport,
   },
+  mixins: [DateHelper],
   computed: {
     ...mapGetters(store.module.done, {
       list_of_done: 'list',

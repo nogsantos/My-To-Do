@@ -1,16 +1,40 @@
+@import '@/assets/scss/abstract/_variables.scss';
+
 .app {
   &-layout {
     &-list {
       &-card {
+        padding: unset !important;
+        background-color: rgba($color: $blue, $alpha: 0.03);
         &-title {
           display: flex;
           align-items: center;
           justify-content: space-between;
         }
-        padding: unset !important;
+
         &-grid {
+          height: 240px;
+          overflow: hidden;
           width: 100% !important;
-          text-align: center;
+
+          &-description {
+            height: 130px;
+            overflow: auto;
+            font-style: italic;
+
+            & > div {
+              margin-bottom: 5px;
+            }
+          }
+
+          &-divider {
+            margin-bottom: 10px;
+          }
+
+          &-actions {
+            float: right;
+            right: 10px;
+          }
         }
       }
     }
