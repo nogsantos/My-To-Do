@@ -16,9 +16,19 @@ const update = ({ commit }, payload) => {
   commit(types.UPDATE, payload);
 };
 
+const bulk_generate = ({ commit }) => {
+  commit(types.BULK_GENERATE);
+};
+
+const bulk_exclude = ({ commit }) => {
+  commit(types.BULK_EXCLUDE);
+};
+
 export default {
   add,
   list,
   exclude,
   update,
+  bulk_generate,
+  bulk_exclude,
 };

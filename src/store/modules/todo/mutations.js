@@ -1,6 +1,7 @@
 import { notification } from 'ant-design-vue';
 
 import db from '@/config/db';
+import faker from 'faker';
 import types from './types';
 
 const add = (state, payload) => {
@@ -16,8 +17,8 @@ const add = (state, payload) => {
   });
 };
 
-const list = async state => {
-  await db.todo.each(todo => {
+const list = state => {
+  db.todo.each(todo => {
     state.list.push(todo);
   });
 };
@@ -53,6 +54,30 @@ const exclude = (state, payload) => {
   }
 };
 
+const bulk_generate = async state => {
+  let todo = [];
+  for (let i = 0; i < 13; ++i) {
+    todo.push({
+      title: faker.random.words(),
+      observation: faker.lorem.paragraph(),
+      created_at: faker.date.recent(),
+    });
+  }
+  db.todo.bulkAdd(todo).then(() => {
+    state.list.push(...todo);
+  });
+};
+
+const bulk_exclude = state => {
+  db.todo
+    .where('id')
+    .above(0)
+    .delete()
+    .then(() => {
+      state.list = [];
+    });
+};
+
 class Exclude {
   constructor(state, payload) {
     this.__state = state;
@@ -84,4 +109,6 @@ export default {
   [types.LIST]: list,
   [types.UPDATE]: update,
   [types.EXCLUDE]: exclude,
+  [types.BULK_GENERATE]: bulk_generate,
+  [types.BULK_EXCLUDE]: bulk_exclude,
 };

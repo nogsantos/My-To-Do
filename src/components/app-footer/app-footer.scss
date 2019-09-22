@@ -3,10 +3,18 @@
 .app {
   &-layout {
     &-footer {
+      position: relative;
       text-align: center;
       flex-shrink: 0;
 
       @extend %def-box-shadow;
+
+      &-helper {
+        position: absolute;
+        float: right;
+        right: 40px;
+        bottom: 20px;
+      }
     }
   }
 }
