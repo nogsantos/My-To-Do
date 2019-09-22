@@ -45,7 +45,7 @@ const bulk_generate = async state => {
     });
   }
   db.done.bulkAdd(done).then(() => {
-    state.list.push(...done);
+    list(state);
   });
 };
 

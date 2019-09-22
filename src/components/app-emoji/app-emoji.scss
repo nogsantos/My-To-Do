@@ -1,34 +1,18 @@
-$sunglow: #feca32;
-$golden-brown: #a1620f;
-$raw-umber: #6e440b;
-$white: #ffffff;
+@import '@/assets/scss/abstract/_variables.scss';
+@import '@/assets/scss/helpers/_mixins.scss';
 
-$eye-color: $golden-brown;
 $eye-size-w: 24px;
 $eye-size-h: 38px;
-$face-color: $sunglow;
 $face-size: 230px;
-$mouth-color: $raw-umber;
-$mouth-size-w: 94px;
-$mouth-size-h: 48px;
-$shine-color: $white;
+$mouth-size-w: 20px;
+$mouth-size-h: 40px;
 $shine-size-w: $face-size - 36px;
 $shine-size-h: $face-size - 24px;
-
-@mixin pos($t: 0, $r: 0, $b: 0, $l: 0) {
-  position: absolute;
-  top: $t;
-  right: $r;
-  bottom: $b;
-  left: $l;
-  margin: auto;
-}
 
 .body-emoji {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 40%;
 
   ul {
     list-style-type: none !important;

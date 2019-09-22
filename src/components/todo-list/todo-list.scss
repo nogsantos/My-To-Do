@@ -23,6 +23,7 @@
           textarea {
             border: 2px dotted transparent;
             background-color: rgba($color: $green, $alpha: 0);
+            overflow: hidden;
 
             &:focus,
             &:hover {
@@ -30,11 +31,23 @@
               color: #fff;
               background-color: $green;
               box-shadow: unset;
+              overflow: auto;
+            }
+          }
+
+          &-description {
+            height: 122px;
+            overflow: auto;
+            font-style: italic;
+
+            & > div {
+              margin-bottom: 5px;
             }
           }
 
           &-info {
             font-style: italic;
+            font-size: 0.7rem;
             margin: 5px 0 0 0;
           }
 

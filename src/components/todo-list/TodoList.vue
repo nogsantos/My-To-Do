@@ -25,7 +25,7 @@
                   <a-input v-model="todo.title"></a-input>
                 </span>
               </div>
-              <div slot="description">
+              <div slot="description" class="app-layout-list-card-grid-description">
                 <a-textarea v-model="todo.observation" :rows="4"></a-textarea>
                 <div class="app-layout-list-card-grid-info">Create at {{ format(todo.created_at) }}</div>
               </div>

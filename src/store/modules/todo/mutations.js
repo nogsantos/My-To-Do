@@ -18,9 +18,11 @@ const add = (state, payload) => {
 };
 
 const list = state => {
-  db.todo.each(todo => {
-    state.list.push(todo);
+  let list = [];
+  db.todo.toArray().then(items => {
+    list.push(...items);
   });
+  state.list = list;
 };
 
 const update = (state, payload) => {
@@ -64,7 +66,7 @@ const bulk_generate = async state => {
     });
   }
   db.todo.bulkAdd(todo).then(() => {
-    state.list.push(...todo);
+    list(state);
   });
 };
 

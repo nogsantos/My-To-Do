@@ -33,6 +33,7 @@ export default {
       add_as_done: 'add',
     }),
     createDone(todo) {
+      delete todo.id;
       const done = Object.assign({ ...todo }, { finished_at: new Date() });
       this.add_as_done(done);
     },
