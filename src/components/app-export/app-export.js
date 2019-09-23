@@ -29,7 +29,7 @@ export default {
         const hidden = document.createElement('a');
         hidden.href = 'data:text/csv;charset=utf-8,' + encodeURI(csv);
         hidden.target = '_blank';
-        hidden.download = `${this.source}_${new Date()
+        hidden.download = `my_To_Do_${this.source}_${new Date()
           .toISOString()
           .replace(' ', '_')
           .toLowerCase()}.csv`;
